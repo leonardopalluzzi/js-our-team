@@ -29,7 +29,12 @@ const cardEl = document.querySelector('.row');
 const formEl = document.querySelector('.add_form');
 
 
-// generate html code for cards
+// 
+/**
+ * generate html code for cards
+ * @param {array} arr 
+ * @returns {array} returns an array of html code to display on page as cards
+ */
 function getCardMarkup(arr) {
     const printArray = [];
     let markup;
@@ -52,11 +57,12 @@ function getCardMarkup(arr) {
 }
 
 
-console.log(getCardMarkup(teamMembers));
-
-getCardMarkup(teamMembers);
-
-//print array function
+/**
+ * reset page content and print array function
+ * @param {array} markupArr 
+ * @param {html} container 
+ * @returns {html} push the html code from the array to the html document
+ */
 function getMembers(markupArr, container) {
     container.innerHTML = '';
     for (let i = 0; i < markupArr.length; i++) {
@@ -66,7 +72,15 @@ function getMembers(markupArr, container) {
 }
 
 
-// get a new object function
+
+/**
+ * get a new object and pushes it into the initial array and re-execute the code to print updated array
+ * @param {string} name 
+ * @param {string} job 
+ * @param {string} email 
+ * @param {array} arr 
+ * @param {html} container 
+ */
 function getNewObj (name, job, email, arr, container) {
     const newObj = {
         'name': name,
@@ -79,9 +93,11 @@ function getNewObj (name, job, email, arr, container) {
 }
 
 
+// funcitons recall
+getCardMarkup(teamMembers);
 getMembers(getCardMarkup(teamMembers), cardEl);
 
-//add object to array function
+//add new obj to array when click on the form submit
 formEl.addEventListener('submit', e => {
     e.preventDefault();
     const nameEl = document.getElementById('name').value;
@@ -95,6 +111,3 @@ formEl.addEventListener('submit', e => {
     
 
 })
-
-
-//add event listener to add names to the array
