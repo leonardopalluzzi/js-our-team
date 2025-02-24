@@ -117,6 +117,5 @@ formEl.addEventListener('submit', e => {
 
     getNewObj(nameEl, jobEl, emailEl, imageEl, teamMembers, cardEl);
     console.log(teamMembers);
-    
-
+    formEl.reset();
 })
