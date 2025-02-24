@@ -14,8 +14,12 @@
 .card_img{
     max-width: 100%;
     
-    @media screen and (min-width: 991px) {
+    @media screen and (min-width: 992px) {
         width: 30%;
         height: auto;
     }
+}
+
+.add_form{
+    margin-bottom: 4rem;
 }

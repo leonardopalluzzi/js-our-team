@@ -19,18 +19,48 @@
                 deserunt magnam quas reiciendis fuga. Minus mollitia laborum odio sequi harum. Debitis, cumque
                 cupiditate eum iure, ducimus error doloribus ea, sit aliquid quam esse adipisci!</p>
         </section>
+        <section class="add_form">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Add a member
+            </button>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="job" class="form-label">Job</label>
+                            <input type="text" class="form-control" id="job">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Email address
+                            </label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
         <section id="cards">
             <div class="container w-80 m-auto">
                 <div class="row">
-                    <div class="col-4 card_container">
-                        
 
-                    </div>
                 </div>
             </div>
 
         </section>
     </div>
+
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
