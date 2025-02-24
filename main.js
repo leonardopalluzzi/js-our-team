@@ -51,17 +51,33 @@ function getCardMarkup(arr) {
     return printArray;
 }
 
-console.log(getCardMarkup(teamMembers, cardEl));
 
-getCardMarkup(teamMembers, cardEl);
+console.log(getCardMarkup(teamMembers));
+
+getCardMarkup(teamMembers);
 
 //print array function
 function getMembers(markupArr, container) {
+    container.innerHTML = '';
     for (let i = 0; i < markupArr.length; i++) {
         container.innerHTML += markupArr[i];
     }
     return container.innerHTML
 }
+
+
+// get a new object function
+function getNewObj (name, job, email, arr, container) {
+    const newObj = {
+        'name': name,
+        'job': job,
+        'email': email
+    }
+    arr.push(newObj);
+    getCardMarkup(arr);
+    getMembers(getCardMarkup(arr), container);
+}
+
 
 getMembers(getCardMarkup(teamMembers), cardEl);
 
@@ -73,6 +89,9 @@ formEl.addEventListener('submit', e => {
     const emailEl = document.getElementById('email').value;
 
     console.log(nameEl, jobEl, emailEl);
+
+    getNewObj(nameEl, jobEl, emailEl, teamMembers, cardEl);
+    console.log(teamMembers);
     
 
 })
