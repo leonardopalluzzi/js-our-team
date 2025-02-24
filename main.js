@@ -1,33 +1,33 @@
 const teamMembers = [
     {
-        name: 'Gianni Coso',
-        job: 'Costruttore di peli per spazzolini',
-        email: 'giannonematto@gmail.com',
+        name: 'MARCO BIANCHI',
+        job: 'Designer',
+        email: 'marcobianchi@team.com',
         image: 'https://picsum.photos/id/237/300'
     }, {
-        name: 'Mario Coso',
-        job: 'Costruttore di peli per parrucche',
-        email: 'giannonematto@gmail.com',
+        name: 'LAURA ROSSI',
+        job: 'Front-end Developer',
+        email: 'laurarossi@team.com',
         image: 'https://picsum.photos/id/237/300'
     }, {
-        name: 'Paolo Coso',
-        job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com',
+        name: 'GIORGIO VERDI',
+        job: 'Back-end Developer',
+        email: 'giorgioverdi@team.com',
         image: 'https://picsum.photos/id/237/300'
     }, {
-        name: 'Paolo Coso',
-        job: 'Costruttore di peli per coperte',
+        name: 'MARTA IPSUM',
+        job: 'SEO Specialist',
         email: 'giannonematto@gmail.com',
+        image: 'martarossi@team.com'
+    }, {
+        name: 'ROBERTO LOREM',
+        job: 'SEO Specialist',
+        email: 'robertolorem@team.com',
         image: 'https://picsum.photos/id/237/300'
     }, {
-        name: 'Paolo Coso',
-        job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com',
-        image: 'https://picsum.photos/id/237/300'
-    }, {
-        name: 'Paolo Coso',
-        job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com',
+        name: 'DANIELA AMET',
+        job: 'Analyst',
+        email: 'danielaamet@team.com',
         image: 'https://picsum.photos/id/237/300'
     },
 ];
@@ -90,7 +90,7 @@ function getMembers(markupArr, container) {
  */
 function getNewObj (name, job, email, image, arr, container) {
     const newObj = {
-        'name': name,
+        'name': name.toUpperCase(),
         'job': job,
         'email': email,
         'image': image
