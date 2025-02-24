@@ -2,27 +2,33 @@ const teamMembers = [
     {
         name: 'Gianni Coso',
         job: 'Costruttore di peli per spazzolini',
-        email: 'giannonematto@gmail.com'
+        email: 'giannonematto@gmail.com',
+        image: 'https://picsum.photos/id/237/300'
     }, {
         name: 'Mario Coso',
         job: 'Costruttore di peli per parrucche',
-        email: 'giannonematto@gmail.com'
+        email: 'giannonematto@gmail.com',
+        image: 'https://picsum.photos/id/237/300'
     }, {
         name: 'Paolo Coso',
         job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com'
+        email: 'giannonematto@gmail.com',
+        image: 'https://picsum.photos/id/237/300'
     }, {
         name: 'Paolo Coso',
         job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com'
+        email: 'giannonematto@gmail.com',
+        image: 'https://picsum.photos/id/237/300'
     }, {
         name: 'Paolo Coso',
         job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com'
+        email: 'giannonematto@gmail.com',
+        image: 'https://picsum.photos/id/237/300'
     }, {
         name: 'Paolo Coso',
         job: 'Costruttore di peli per coperte',
-        email: 'giannonematto@gmail.com'
+        email: 'giannonematto@gmail.com',
+        image: 'https://picsum.photos/id/237/300'
     },
 ];
 const cardEl = document.querySelector('.row');
@@ -39,15 +45,15 @@ function getCardMarkup(arr) {
     const printArray = [];
     let markup;
     for (let i = 0; i < arr.length; i++) {
-        const { name, job, email } = arr[i];
+        const { name, job, email, image } = arr[i];
         printArray[i] =
             `<div class="col-4 mb-4">
             <div class="card_custom d-flex flex-column flex-lg-row gap-2">
-                <img class="card_img" src="https://picsum.photos/id/237/300" alt="">
+                <img class="card_img" src="${image}" alt="">
                 <div class="text_card">
-                    <h3 id="name">${name}</h3>
-                    <span id="job" class="fs-6">${job}</span>
-                    <a id="email" class="fs-6" href="">${email}</a>
+                    <h3 id="name" class="viga-regular">${name}</h3>
+                    <span id="job">${job}</span>
+                    <a id="email" class="d-none d-md-block" href="">${email}</a>
                 </div>
             </div>
         </div>`
@@ -79,13 +85,15 @@ function getMembers(markupArr, container) {
  * @param {string} job 
  * @param {string} email 
  * @param {array} arr 
+ * @param {string} image
  * @param {html} container 
  */
-function getNewObj (name, job, email, arr, container) {
+function getNewObj (name, job, email, image, arr, container) {
     const newObj = {
         'name': name,
         'job': job,
-        'email': email
+        'email': email,
+        'image': image
     }
     arr.push(newObj);
     getCardMarkup(arr);
@@ -103,10 +111,11 @@ formEl.addEventListener('submit', e => {
     const nameEl = document.getElementById('name').value;
     const jobEl = document.getElementById('job').value;
     const emailEl = document.getElementById('email').value;
+    const imageEl = document.getElementById('image').value;
 
-    console.log(nameEl, jobEl, emailEl);
+    console.log(nameEl, jobEl, emailEl, imageEl);
 
-    getNewObj(nameEl, jobEl, emailEl, teamMembers, cardEl);
+    getNewObj(nameEl, jobEl, emailEl, imageEl, teamMembers, cardEl);
     console.log(teamMembers);
     
 

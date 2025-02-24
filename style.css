@@ -1,10 +1,46 @@
+:root{
+    --ot-dark: black;
+    --ot-main: #e53170;
+    --ot-cta: #5fbadf;
+    --ot-lighter: white;
+}
+
+.viga-regular {
+    font-family: "Viga", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.text_card{
+    #name{
+    font-weight: 200;
+    font-size: 1.5rem;
+    }
+    #job{
+        font-size: 0.9rem; 
+    }
+    a{
+        font-size: 0.8rem;
+    }
+}
+
 #text{
     text-align: center
 }
 
+.title{
+    color: var(--ot-main);
+}
+
+.card_custom a{
+    text-decoration: none;
+    color: var(--ot-cta);
+}
+
 .card_custom{
-    background-color: black;
-    color: white;
+    background-color: var(--ot-dark);
+    color: var(--ot-lighter);
 }
 
 .text_card{
