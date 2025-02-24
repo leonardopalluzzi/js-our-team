@@ -12,6 +12,10 @@
 }
 
 .card_img{
-    width: 30%;
-    height: auto;
+    max-width: 100%;
+    
+    @media screen and (min-width: 991px) {
+        width: 30%;
+        height: auto;
+    }
 }

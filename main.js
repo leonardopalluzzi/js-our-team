@@ -11,6 +11,18 @@ const teamMembers = [
         name: 'Paolo Coso',
         job: 'Costruttore di peli per coperte',
         email: 'giannonematto@gmail.com'
+    }, {
+        name: 'Paolo Coso',
+        job: 'Costruttore di peli per coperte',
+        email: 'giannonematto@gmail.com'
+    }, {
+        name: 'Paolo Coso',
+        job: 'Costruttore di peli per coperte',
+        email: 'giannonematto@gmail.com'
+    }, {
+        name: 'Paolo Coso',
+        job: 'Costruttore di peli per coperte',
+        email: 'giannonematto@gmail.com'
     },
 ];
 const cardEl = document.querySelector('.row');
@@ -23,13 +35,13 @@ function getCardMarkup (arr){
     for(let i = 0; i < arr.length; i++){
         const {name, job, email} = arr[i];
         printArray[i] =
-        `<div class="col-4">
-            <div class="card_custom d-flex flex-row gap-2">
+        `<div class="col-4 mb-4">
+            <div class="card_custom d-flex flex-column flex-lg-row gap-2">
                 <img class="card_img" src="https://picsum.photos/id/237/300" alt="">
                 <div class="text_card">
                     <h3 id="name">${name}</h3>
-                    <span id="job">${job}</span>
-                    <a id="email" href="">${email}</a>
+                    <span id="job" class="fs-6">${job}</span>
+                    <a id="email" class="fs-6" href="">${email}</a>
                 </div>
             </div>
         </div>`
