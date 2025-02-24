@@ -17,8 +17,8 @@ const teamMembers = [
     }, {
         name: 'MARTA IPSUM',
         job: 'SEO Specialist',
-        email: 'giannonematto@gmail.com',
-        image: 'martarossi@team.com'
+        email: 'martarossi@team.com',
+        image: 'https://picsum.photos/id/237/300'
     }, {
         name: 'ROBERTO LOREM',
         job: 'SEO Specialist',
