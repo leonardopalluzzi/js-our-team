@@ -47,13 +47,13 @@ function getCardMarkup(arr) {
     for (let i = 0; i < arr.length; i++) {
         const { name, job, email, image } = arr[i];
         printArray[i] =
-            `<div class="col-4 mb-4">
-            <div class="card_custom d-flex flex-column flex-lg-row gap-2">
+            `<div class="col-12 col-md-6 col-xl-4 mb-4">
+            <div class="card_custom d-flex ">
                 <img class="card_img" src="${image}" alt="">
-                <div class="text_card">
+                <div class="text_card px-2">
                     <h3 id="name" class="viga-regular">${name}</h3>
-                    <span id="job">${job}</span>
-                    <a id="email" class="d-none d-md-block" href="">${email}</a>
+                    <div id="job">${job}</div>
+                    <a id="email" class="" href="">${email}</a>
                 </div>
             </div>
         </div>`
@@ -117,5 +117,7 @@ formEl.addEventListener('submit', e => {
 
     getNewObj(nameEl, jobEl, emailEl, imageEl, teamMembers, cardEl);
     console.log(teamMembers);
+    console.log(formEl);
+    
     formEl.reset();
 })
